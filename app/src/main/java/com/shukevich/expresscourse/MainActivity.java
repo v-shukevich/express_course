@@ -1,6 +1,7 @@
 package com.shukevich.expresscourse;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,16 +24,29 @@ public class MainActivity extends AppCompatActivity {
         mInputEditText = findViewById(R.id.editText);
         mInfoTextView = findViewById(R.id.textView);
     }
+    final String TAG = "ExpressCourse";
 
     public void onClick(View view) {
-       // String result = mInputEditText.getText().toString();
-        //mInfoTextView.setText(result);
-        int filmTime = 135;
-        int hours = filmTime / 60;
-        int minutes = filmTime % 60;
-
-        mInfoTextView.setText("Кот в сапогах идёт " + hours + " часа " + minutes + " минут");
-
+        int x = 3;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        x *= x;
+        Log.i(TAG, Integer.toString(x));
+        String result = mInputEditText.getText().toString();
+        mInfoTextView.setText(result);
         mInputEditText.setText("");
     }
 }
