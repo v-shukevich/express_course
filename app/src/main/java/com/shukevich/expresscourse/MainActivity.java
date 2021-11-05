@@ -25,8 +25,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        String result = mInputEditText.getText().toString();
-        mInfoTextView.setText(result);
+       // String result = mInputEditText.getText().toString();
+        //mInfoTextView.setText(result);
+        int filmTime = 135;
+        int hours = filmTime / 60;
+        int minutes = filmTime % 60;
+
+        mInfoTextView.setText("Кот в сапогах идёт " + hours + " часа " + minutes + " минут");
+
         mInputEditText.setText("");
     }
 }
