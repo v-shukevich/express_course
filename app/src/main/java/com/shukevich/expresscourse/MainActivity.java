@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,26 +27,24 @@ public class MainActivity extends AppCompatActivity {
     final String TAG = "ExpressCourse";
 
     public void onClick(View view) {
-        int x = 2;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        x *= x;
-        Log.i(TAG, Integer.toString(x));
-        String result = mInputEditText.getText().toString();
-        mInfoTextView.setText(result);
-        mInputEditText.setText("");
+        //String result = mInputEditText.getText().toString();
+        //mInfoTextView.setText(result);
+        //mInputEditText.setText("");
+
+        // mInfoTextView.append("y равно: " + y); Вывод простой
+
+        Log.d(TAG, Cat.sId + "");
+        Log.d(TAG, Cat.sTestNumber + "");
+
+// Создаём первого кота
+        Cat firstCat = new Cat("vasya", 2);
+        Log.d(TAG, Cat.sId + "");
+        Log.d(TAG, Cat.sTestNumber + "");
+
+        Cat.sTestNumber = 15; // устанавливаем новое значение
+// Создаём второго кота
+        Cat secondCat = new Cat("murzik", 12);
+        Log.d(TAG, Cat.sId + "");
+        Log.d(TAG, Cat.sTestNumber + "");
     }
 }
