@@ -1,45 +1,40 @@
 package com.shukevich.expresscourse;
 
 class Box {
-    int width; // ширина коробки
-    int height; // высота коробки
-    int depth; // глубина коробки
+    private int width; // ширина коробки
+    private int height; // высота коробки
+    private int depth; // глубина коробки
 
-    // Конструктор
-    Box() {
-        width = 10;
-        height = 10;
-        depth = 10;
+    // Конструктор для создания клона объекта
+    Box(Box ob) { // передача объекта конструктору
+        width = ob.width;
+        height = ob.height;
+        depth = ob.depth;
     }
 
-    // Второй конструктор
+    // Конструктор, используемый при указании всех измерений
     Box(int w, int h, int d) {
         width = w;
         height = h;
         depth = d;
     }
 
-    // Третий конструктор для куба
-    Box(int len) {
-        width = height = depth = len;
+    // Конструктор, используемый, когда ни одно из измерений не указано
+    Box() {
+        // значение -1 используется
+        // для указания неинициализированного параллелепипеда
+        width = -1;
+        height = -1;
+        depth = -1;
     }
 
-    // Используем объект типа Box
-    Box(Box ob) {
-        width = ob.width;
-        height = ob.height;
-        depth = ob.depth;
+    // Конструктор для создания куба
+    Box(int len) {
+        width = height = depth = len;
     }
 
     // вычисляем объём коробки
     int getVolume() {
         return width * height * depth;
-    }
-
-    // устанавливаем размеры коробки
-    void setDim(int w, int h, int d) {
-        width = w;
-        height = h;
-        depth = d;
     }
 }

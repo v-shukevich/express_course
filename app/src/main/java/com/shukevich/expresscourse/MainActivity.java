@@ -33,18 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
         // mInfoTextView.append("y равно: " + y); Вывод простой
 
-        Log.d(TAG, Cat.sId + "");
-        Log.d(TAG, Cat.sTestNumber + "");
+        Figure figure = new Figure(10, 10);
+        Rectangle rectangle = new Rectangle(8, 5);
+        Triangle triangle = new Triangle(10, 6);
 
-// Создаём первого кота
-        Cat firstCat = new Cat("vasya", 2);
-        Log.d(TAG, Cat.sId + "");
-        Log.d(TAG, Cat.sTestNumber + "");
+        Figure fig;
 
-        Cat.sTestNumber = 15; // устанавливаем новое значение
-// Создаём второго кота
-        Cat secondCat = new Cat("murzik", 12);
-        Log.d(TAG, Cat.sId + "");
-        Log.d(TAG, Cat.sTestNumber + "");
+        fig = figure;
+        mInfoTextView.append("Площадь равна " + fig.area());
+
+        fig = rectangle;
+        mInfoTextView.append("Площадь равна " + fig.area());
+
+        fig = triangle;
+        mInfoTextView.append("Площадь равна " + fig.area());
     }
 }
