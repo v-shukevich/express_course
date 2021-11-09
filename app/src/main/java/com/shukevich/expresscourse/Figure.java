@@ -1,6 +1,6 @@
 package com.shukevich.expresscourse;
 
-class Figure {
+abstract class Figure {
     double dim1;
     double dim2;
 
@@ -9,24 +9,11 @@ class Figure {
         dim2 = b;
     }
 
-    double area() {
-        System.out.println("Площадь фигуры");
-        return 0;
-    }
+    // абстрактный метод для вычисления площади
+    abstract double area();
 }
 
-class Rectangle extends Figure {
-    Rectangle(double a, double b) {
-        super(a, b);
-    }
-
-    // Переопределяем метод
-    double area() {
-        System.out.println("Площадь прямоугольника");
-        return dim1 * dim2;
-    }
-}
-
+// Клас Треугольник
 class Triangle extends Figure {
     Triangle(double a, double b) {
         super(a, b);
@@ -34,7 +21,6 @@ class Triangle extends Figure {
 
     // переопределяем метод
     double area() {
-        System.out.println("Площадь треугольника");
         return dim1 * dim2 / 2;
     }
 }
