@@ -9,7 +9,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.Random;
+
+
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,11 +32,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     public void onClick(View view) {
-        //String result = mInputEditText.getText().toString();
-        //mInfoTextView.setText(result);
-        //mInputEditText.setText("");
+        //String result = mInputEditText.getText().toString(); введеное значение
+        //mInfoTextView.setText(result); в строке вывода информирования
+        //mInputEditText.setText(""); в строке ввода видимый текст пусто
+        //mInfoTextView.append("i равно: " + i + "\n"); можно использовать вместо System.out.println
+        Scanner scanner = new Scanner("Кот Васька 28 Москва");
+        while (scanner.hasNext()) {
+            mInfoTextView.append(scanner.next()+ "\n" );
+        }
 
 
     }
-}
+
+
+    }
+
+
