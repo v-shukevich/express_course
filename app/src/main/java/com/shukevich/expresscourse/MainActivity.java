@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,15 +39,15 @@ public class MainActivity extends AppCompatActivity {
         //mInfoTextView.setText(result); в строке вывода информирования
         //mInputEditText.setText(""); в строке ввода видимый текст пусто
         //mInfoTextView.append("i равно: " + i + "\n"); можно использовать вместо System.out.println
-        Scanner scanner = new Scanner("Кот Васька 28 Москва");
-        while (scanner.hasNext()) {
-            mInfoTextView.append(scanner.next()+ "\n" );
+        ArrayList catNames = new ArrayList();
+        catNames.add("Васька");
+        mInfoTextView.setText(" "+catNames.get(0));
         }
 
 
     }
 
 
-    }
+
 
 
